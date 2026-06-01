@@ -1,0 +1,23 @@
+{
+  "servers": {
+    "hubspot": {
+      "preset": "hubspot",
+      "token": "${HUBSPOT_TOKEN}"
+    },
+    "make": {
+      "preset": "make",
+      "token": "${MAKE_MCP_TOKEN}",
+      "options": { "zone": "eu2.make.com" }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"]
+    },
+    "internal": {
+      "type": "auto",
+      "url": "https://mcp.internal.example.com/mcp",
+      "headers": { "X-Api-Key": "${INTERNAL_API_KEY}" },
+      "disabled": true
+    }
+  }
+}

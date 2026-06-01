@@ -1,0 +1,54 @@
+{
+  "name": "mcp-connect",
+  "version": "0.1.0",
+  "description": "A configurable TypeScript client library for connecting to and engaging with multiple MCP servers (HubSpot, Make, and any other) over both remote (HTTP/SSE) and local (stdio) transports.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example": "tsx examples/basic.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:37545/git/samcbarth/mcp"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hubspot",
+    "make",
+    "client",
+    "sdk",
+    "ai",
+    "tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
